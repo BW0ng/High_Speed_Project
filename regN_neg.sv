@@ -1,4 +1,4 @@
-module regN	(D, clk, Q);
+module regN_neg	(D, clk, Q);
 
 	parameter N = 32;
 

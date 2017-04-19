@@ -1,4 +1,4 @@
-module regN_pos_testbench();
+module regN_neg_testbench();
 	integer passed 		= 	1;
 	integer num_tests 	= 	20;
 
@@ -9,16 +9,16 @@ module regN_pos_testbench();
 	// Test
 	reg [31:0] 		test [20:0];
 
-	regN_pos dut (
+	regN_neg dut (
 	  			.D(D),
 				.clk(clk),
 				.Q(Q)
 	);
 
 	always begin
-	    clk = 1;
-	    #10;
 	    clk = 0;
+	    #10;
+	    clk = 1;
 	    #10;
 	end
 

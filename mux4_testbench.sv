@@ -1,6 +1,6 @@
 module mux4_testbench();
 
-      logic [31:0] 	A, B, C, D;
+    logic [31:0] 	A, B, C, D;
 	  logic [1:0]	select;
 	  logic [31:0] 	out;
 
@@ -12,7 +12,7 @@ module mux4_testbench();
 	  integer passed = 1;
 
       mux4 dut (
-		  			.A(A),
+		  		.A(A),
 					.B(B),
 					.C(C),
 					.D(D),
@@ -20,16 +20,16 @@ module mux4_testbench();
 					.out(out)
                 );
 
-      always @ ( * ) begin
-            clk = 1;
-            #10;
-            clk = 0;
-            #10;
-
-      end
+      always
+          begin
+              clk = 1;
+              #10;
+              clk = 0;
+              #10;
+          end
 
 	  initial begin
-	  	test[0] = 32'd1;
+	  test[0] = 32'd1;
 		test[1] = 32'd2;
 		test[2] = 32'd3;
 		test[3] = 32'd4;
@@ -41,10 +41,10 @@ module mux4_testbench();
 	  end
 
       initial begin
-	  	A = 32'd1;
-		B = 32'd2;
-		C = 32'd3;
-		D = 32'd4;
+      	  A = 32'd1;
+      		B = 32'd2;
+      		C = 32'd3;
+      		D = 32'd4;
 
 		for (int i = 0; i < 4; i = i + 1)
 			begin
