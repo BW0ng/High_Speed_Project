@@ -1,12 +1,9 @@
-
-.dropbox
-
-.DS_Store
-
-Icon
+*
 
 /work/*
 
-vsim.wlf
+!*.sv
 
-transcript
+!*.v
+
+!*.do
